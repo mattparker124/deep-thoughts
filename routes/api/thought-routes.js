@@ -16,14 +16,14 @@ router
 
 router
     .route('/:userId')
-    .get(getThoughtById)
     .post(addThought);
 
 router
     .route('/:userId/:thoughtId')
-    .put(updateThought)
     .post(addReaction)
-    .delete(removeThought);
+    .delete(removeThought)
+    .get(getThoughtById)
+    .put(updateThought);
 
 router
     .route('/:userId/:thoughtId/:reactionId')
